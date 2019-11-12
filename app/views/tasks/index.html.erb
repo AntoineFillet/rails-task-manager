@@ -1,0 +1,14 @@
+
+
+<% @tasks.each do |task| %>
+  <h2>
+    <%= task.completed ? '☑︎' : '☐' %>
+    <%= link_to task.title, show_path(task) %>
+  </h2>
+
+
+<% end %>
+
+<h2>
+  <%= link_to "+ Add a new task ?", new_path %>
+</h2>
